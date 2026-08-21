@@ -244,3 +244,552 @@ img {
     margin-top: 30px !important;
   }
 }
+
+/* SON MOBİL HERO DÜZELTMESİ */
+
+@media (max-width: 850px) {
+  .hero h1 {
+    font-size: 46px !important;
+    line-height: .95 !important;
+    letter-spacing: -1px !important;
+    margin: 0 !important;
+  }
+
+  .hero h1 span,
+  .hero h1 strong {
+    display: block !important;
+    line-height: .95 !important;
+    position: relative !important;
+  }
+
+  .hero h1 strong {
+    margin-left: 7vw !important;
+  }
+
+  .heroLine {
+    display: block !important;
+    width: 90px !important;
+    height: 2px !important;
+    margin: 30px 0 24px !important;
+    background: #b58a32 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 42px !important;
+  }
+
+  .hero h1 strong {
+    margin-left: 6vw !important;
+  }
+
+  .heroLine {
+    width: 75px !important;
+    margin-top: 26px !important;
+  }
+}
+
+/* =========================================================
+   DÜNYA BÖLÜMÜ — DAR DESKTOP / TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) and (min-width: 851px) {
+
+  .worldMap {
+    min-height: auto !important;
+    padding-bottom: 20px !important;
+  }
+
+  .worldMap .mapLine,
+  .worldMap .mapPoint {
+    display: none !important;
+  }
+
+  .worldMap .countryCard {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    min-height: 150px !important;
+    margin: 0 !important;
+
+    transform: none !important;
+  }
+
+  .worldMap {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1px !important;
+    background: rgba(166,123,40,.18) !important;
+  }
+}
+
+
+/* =========================================================
+   PORTRAIT — TEMİZ VE STABİL
+   ========================================================= */
+
+.portrait {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 470px !important;
+  margin: 0 auto !important;
+}
+
+.portraitImage {
+  position: relative !important;
+  width: 100% !important;
+  padding: 12px !important;
+  background: #e7dfd0 !important;
+  overflow: visible !important;
+}
+
+.portraitImage::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 18px -18px -18px 18px !important;
+  border: 1px solid rgba(166,123,40,.45) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.portraitImage img {
+  position: relative !important;
+  z-index: 2 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 560px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.portraitLabel {
+  position: relative !important;
+  z-index: 5 !important;
+  width: 82% !important;
+  margin: -55px 0 0 auto !important;
+  padding: 22px 25px !important;
+  background: #172333 !important;
+}
+
+.portraitLabel span {
+  display: block !important;
+  color: #caa34b !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+}
+
+.portraitLabel small {
+  display: block !important;
+  margin-top: 8px !important;
+  color: #aeb7bf !important;
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 850px) {
+
+  .portrait {
+    max-width: 330px !important;
+  }
+
+  .portraitImage img {
+    height: 330px !important;
+  }
+
+  .portraitLabel {
+    width: 88% !important;
+    margin-top: -35px !important;
+    padding: 18px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE + INTRO FIX
+   ========================================================= */
+
+/* INTRO BITENE KADAR SİTENİN İÇERİĞİNİ GİZLE */
+.site.introLoading > *:not(.intro):not(.introScreen) {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.site.introReady > * {
+  visibility: visible;
+}
+
+/* INTRO HER ŞEYİN ÜSTÜNDE */
+.intro,
+.introScreen {
+  z-index: 99999 !important;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .site {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .nav {
+    padding: 18px 6% !important;
+  }
+
+  .navInner {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 42px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .menuBtn {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 145px 7% 75px !important;
+    display: block !important;
+  }
+
+  .heroContent {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .eyebrow {
+    font-size: 8px !important;
+    letter-spacing: 3px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero h1 {
+    font-size: 46px !important;
+    line-height: .94 !important;
+    letter-spacing: -1px !important;
+    width: 100% !important;
+  }
+
+  .hero h1 span,
+  .hero h1 strong {
+    display: block !important;
+    line-height: .94 !important;
+    margin: 0 !important;
+  }
+
+  .hero h1 strong {
+    margin-left: 7vw !important;
+  }
+
+  .heroLine {
+    width: 80px !important;
+    height: 2px !important;
+    margin: 28px 0 22px !important;
+  }
+
+  .heroContent > p {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+  }
+
+  .heroButtons {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .heroButtons a {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .stats div {
+    min-width: 0 !important;
+    padding: 28px 10px !important;
+  }
+
+  .stats strong {
+    font-size: 42px !important;
+  }
+
+  .stats small {
+    font-size: 7px !important;
+    letter-spacing: 2px !important;
+    line-height: 1.5 !important;
+  }
+
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 85px 7% !important;
+    overflow: hidden !important;
+  }
+
+  .sectionTop {
+    margin-bottom: 42px !important;
+  }
+
+  .sectionMini {
+    display: none !important;
+  }
+
+  .storyGrid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 50px !important;
+  }
+
+  .portrait {
+    width: 100% !important;
+    max-width: 330px !important;
+    margin: 0 auto !important;
+  }
+
+  .portraitImage {
+    width: 100% !important;
+  }
+
+  .portraitImage img {
+    width: 100% !important;
+    height: 330px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+
+  .portraitLabel {
+    width: 88% !important;
+    margin: -35px 0 0 auto !important;
+    padding: 17px 18px !important;
+  }
+
+  .portraitLabel span {
+    font-size: 8px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .portraitLabel small {
+    font-size: 9px !important;
+    line-height: 1.5 !important;
+  }
+
+  .storyCopy {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .storyCopy h2,
+  .worldHeading h2,
+  .contact h2 {
+    font-size: clamp(44px, 13vw, 65px) !important;
+    line-height: .92 !important;
+    letter-spacing: -2px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .storyCopy p,
+  .storyCopy .lead {
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+    max-width: 100% !important;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .timelineItem {
+    display: grid !important;
+    grid-template-columns: 72px minmax(0, 1fr) !important;
+    gap: 16px !important;
+    padding: 36px 0 !important;
+    overflow: visible !important;
+  }
+
+  .timelineYear {
+    font-size: 25px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    z-index: 5 !important;
+  }
+
+  .timelineContent {
+    min-width: 0 !important;
+    padding-left: 6px !important;
+    z-index: 6 !important;
+  }
+
+  .timelineContent h3 {
+    font-size: 26px !important;
+    line-height: 1.08 !important;
+    margin-bottom: 12px !important;
+    white-space: normal !important;
+  }
+
+  .timelineContent p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
+  }
+
+  .timelineDot {
+    display: none !important;
+  }
+
+  /* DÜNYA */
+  .worldHeading {
+    display: block !important;
+  }
+
+  .worldHeading > * {
+    width: 100% !important;
+  }
+
+  .worldMap {
+    min-height: auto !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .worldMap .mapLine,
+  .worldMap .mapPoint {
+    display: none !important;
+  }
+
+  .countryCard {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 135px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .countryCard h3 {
+    font-size: 30px !important;
+    line-height: 1 !important;
+  }
+
+  /* KURUMLAR */
+  .companies {
+    grid-template-columns: 1fr !important;
+    gap: 1px !important;
+  }
+
+  .companies article {
+    min-height: auto !important;
+    padding: 32px 25px !important;
+  }
+
+  .companies article h3 {
+    font-size: 30px !important;
+  }
+
+  /* VİZYON */
+  .vision {
+    min-height: auto !important;
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .visionContent {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .visionContent h2 {
+    font-size: 52px !important;
+    line-height: .9 !important;
+    letter-spacing: -2px !important;
+  }
+
+  .visionContent p {
+    margin-top: 30px !important;
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+    max-width: 100% !important;
+  }
+
+  /* İLETİŞİM */
+  .contact {
+    text-align: left !important;
+  }
+
+  .contact .heroButtons {
+    align-items: stretch !important;
+  }
+
+  .contactInfo {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+
+  footer {
+    flex-direction: column !important;
+    gap: 14px !important;
+    padding: 35px 7% !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 42px !important;
+  }
+
+  .storyCopy h2,
+  .worldHeading h2,
+  .contact h2 {
+    font-size: 42px !important;
+  }
+
+  .stats strong {
+    font-size: 36px !important;
+  }
+
+  .timelineItem {
+    grid-template-columns: 65px minmax(0, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .timelineYear {
+    font-size: 22px !important;
+  }
+}

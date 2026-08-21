@@ -28,7 +28,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    const timer = setTimeout(() => setIntro(false), 2200);
+    const timer = setTimeout(() => setIntro(false), 3200);
 
     const scroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", scroll);
@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="site">
+    <main className={`site ${intro ? "introLoading" : "introReady"}`}>
 
       {intro && (
         <div className="intro">
