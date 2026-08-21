@@ -1616,8 +1616,127 @@ export default function Home() {
             display: none !important;
           }
         }
+/* SON MOBİL DÜZELTME - TIMELINE + PORTRAIT */
 
+@media (max-width: 600px) {
+
+  /* BİYOGRAFİ / PORTRAIT */
+  .storyGrid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 55px !important;
+    align-items: stretch !important;
+  }
+
+  .portrait {
+    width: 100% !important;
+    max-width: 330px !important;
+    margin: 0 auto !important;
+  }
+
+  .portraitImage {
+    padding: 8px !important;
+  }
+
+  .portrait img {
+    width: 100% !important;
+    height: 430px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  .portraitImage:after {
+    inset: 12px -10px -10px 12px !important;
+  }
+
+  .portraitLabel {
+    width: 88% !important;
+    margin: -35px 0 0 auto !important;
+    padding: 18px !important;
+  }
+
+  .storyCopy {
+    width: 100% !important;
+  }
+
+  .storyCopy h2 {
+    font-size: clamp(52px, 15vw, 70px) !important;
+    line-height: .9 !important;
+    letter-spacing: -2px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .storyCopy p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    max-width: 100% !important;
+  }
+
+
+  /* TIMELINE */
+  .timeline {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .timelineItem {
+    display: grid !important;
+    grid-template-columns: 75px minmax(0, 1fr) !important;
+    gap: 18px !important;
+    padding: 45px 0 !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  .timelineYear {
+    font-size: 27px !important;
+    line-height: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
+    white-space: nowrap !important;
+  }
+
+  .timelineDot {
+    display: none !important;
+  }
+
+  .timelineContent {
+    padding-left: 10px !important;
+    min-width: 0 !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .timelineContent h3 {
+    font-size: 27px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 18px !important;
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+  .timelineContent p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* ALTIN OVAL/ÇİZGİ EFEKTİNİ MOBİLDE KALDIR */
+  .timelineItem::before,
+  .timelineItem::after,
+  .timelineContent::before,
+  .timelineContent::after {
+    display: none !important;
+  }
+
+  /* Timeline içinde çizgi/oval oluşturan elemanlar */
+  .timelineItem > * {
+    transform: none !important;
+  }
+}
       `}</style>
     </main>
   );
+  
 }
