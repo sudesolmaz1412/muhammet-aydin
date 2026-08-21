@@ -200,3 +200,47 @@ img {
   }
 }
 
+
+@media (max-width: 768px) {
+  .vision {
+    min-height: auto !important;
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .visionText {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .visionText h2 {
+    font-size: clamp(48px, 15vw, 72px) !important;
+    line-height: 0.9 !important;
+    letter-spacing: -2px !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .visionText p {
+    max-width: 100% !important;
+    margin-top: 35px !important;
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+    display: block !important;
+  }
+
+  .visionText .heroRule {
+    margin-top: 35px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .visionText h2 {
+    font-size: 52px !important;
+    line-height: 0.88 !important;
+  }
+
+  .visionText p {
+    margin-top: 30px !important;
+  }
+}
