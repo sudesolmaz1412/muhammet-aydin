@@ -245,590 +245,11 @@ img {
   }
 }
 
-/* SON MOBİL HERO DÜZELTMESİ */
-
-@media (max-width: 850px) {
-  .hero h1 {
-    font-size: 46px !important;
-    line-height: .95 !important;
-    letter-spacing: -1px !important;
-    margin: 0 !important;
-  }
-
-  .hero h1 span,
-  .hero h1 strong {
-    display: block !important;
-    line-height: .95 !important;
-    position: relative !important;
-  }
-
-  .hero h1 strong {
-    margin-left: 7vw !important;
-  }
-
-  .heroLine {
-    display: block !important;
-    width: 90px !important;
-    height: 2px !important;
-    margin: 30px 0 24px !important;
-    background: #b58a32 !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 42px !important;
-  }
-
-  .hero h1 strong {
-    margin-left: 6vw !important;
-  }
-
-  .heroLine {
-    width: 75px !important;
-    margin-top: 26px !important;
-  }
-}
-
-/* =========================================================
-   DÜNYA BÖLÜMÜ — DAR DESKTOP / TABLET
-   ========================================================= */
-
-@media (max-width: 1100px) and (min-width: 851px) {
-
-  .worldMap {
-    min-height: auto !important;
-    padding-bottom: 20px !important;
-  }
-
-  .worldMap .mapLine,
-  .worldMap .mapPoint {
-    display: none !important;
-  }
-
-  .worldMap .countryCard {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-
-    width: 100% !important;
-    min-height: 150px !important;
-    margin: 0 !important;
-
-    transform: none !important;
-  }
-
-  .worldMap {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1px !important;
-    background: rgba(166,123,40,.18) !important;
-  }
-}
-
-
-/* =========================================================
-   PORTRAIT — TEMİZ VE STABİL
-   ========================================================= */
-
-.portrait {
-  position: relative !important;
-  width: 100% !important;
-  max-width: 470px !important;
-  margin: 0 auto !important;
-}
-
-.portraitImage {
-  position: relative !important;
-  width: 100% !important;
-  padding: 12px !important;
-  background: #e7dfd0 !important;
-  overflow: visible !important;
-}
-
-.portraitImage::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 18px -18px -18px 18px !important;
-  border: 1px solid rgba(166,123,40,.45) !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-}
-
-.portraitImage img {
-  position: relative !important;
-  z-index: 2 !important;
-  display: block !important;
-  width: 100% !important;
-  height: 560px !important;
-  object-fit: cover !important;
-  object-position: center top !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.portraitLabel {
-  position: relative !important;
-  z-index: 5 !important;
-  width: 82% !important;
-  margin: -55px 0 0 auto !important;
-  padding: 22px 25px !important;
-  background: #172333 !important;
-}
-
-.portraitLabel span {
-  display: block !important;
-  color: #caa34b !important;
-  font-size: 9px !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px !important;
-}
-
-.portraitLabel small {
-  display: block !important;
-  margin-top: 8px !important;
-  color: #aeb7bf !important;
-  font-size: 10px !important;
-  line-height: 1.5 !important;
-}
-
-@media (max-width: 850px) {
-
-  .portrait {
-    max-width: 330px !important;
-  }
-
-  .portraitImage img {
-    height: 330px !important;
-  }
-
-  .portraitLabel {
-    width: 88% !important;
-    margin-top: -35px !important;
-    padding: 18px !important;
-  }
-}
-
-
-/* =========================================================
-   FINAL MOBILE + INTRO FIX
-   ========================================================= */
-
-/* INTRO BITENE KADAR SİTENİN İÇERİĞİNİ GİZLE */
-.site.introLoading > *:not(.intro):not(.introScreen) {
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-.site.introReady > * {
-  visibility: visible;
-}
-
-/* INTRO HER ŞEYİN ÜSTÜNDE */
-.intro,
-.introScreen {
-  z-index: 99999 !important;
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 850px) {
 
   html,
   body {
-    width: 100%;
-    max-width: 100%;
     overflow-x: hidden !important;
-  }
-
-  .site {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
-  }
-
-  .nav {
-    padding: 18px 6% !important;
-  }
-
-  .navInner {
-    width: 100%;
-  }
-
-  .logo {
-    font-size: 42px !important;
-    letter-spacing: 3px !important;
-  }
-
-  .menuBtn {
-    width: 46px !important;
-    height: 46px !important;
-  }
-
-  .hero {
-    min-height: auto !important;
-    padding: 145px 7% 75px !important;
-    display: block !important;
-  }
-
-  .heroContent {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .eyebrow {
-    font-size: 8px !important;
-    letter-spacing: 3px !important;
-    line-height: 1.8 !important;
-    margin-bottom: 24px !important;
-  }
-
-  .hero h1 {
-    font-size: 46px !important;
-    line-height: .94 !important;
-    letter-spacing: -1px !important;
-    width: 100% !important;
-  }
-
-  .hero h1 span,
-  .hero h1 strong {
-    display: block !important;
-    line-height: .94 !important;
-    margin: 0 !important;
-  }
-
-  .hero h1 strong {
-    margin-left: 7vw !important;
-  }
-
-  .heroLine {
-    width: 80px !important;
-    height: 2px !important;
-    margin: 28px 0 22px !important;
-  }
-
-  .heroContent > p {
-    width: 100% !important;
-    max-width: 100% !important;
-    font-size: 15px !important;
-    line-height: 1.75 !important;
-  }
-
-  .heroButtons {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-
-  .heroButtons a {
-    width: 100% !important;
-    text-align: center !important;
-  }
-
-  .stats {
-    grid-template-columns: 1fr 1fr !important;
-  }
-
-  .stats div {
-    min-width: 0 !important;
-    padding: 28px 10px !important;
-  }
-
-  .stats strong {
-    font-size: 42px !important;
-  }
-
-  .stats small {
-    font-size: 7px !important;
-    letter-spacing: 2px !important;
-    line-height: 1.5 !important;
-  }
-
-  .section {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 85px 7% !important;
-    overflow: hidden !important;
-  }
-
-  .sectionTop {
-    margin-bottom: 42px !important;
-  }
-
-  .sectionMini {
-    display: none !important;
-  }
-
-  .storyGrid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 50px !important;
-  }
-
-  .portrait {
-    width: 100% !important;
-    max-width: 330px !important;
-    margin: 0 auto !important;
-  }
-
-  .portraitImage {
-    width: 100% !important;
-  }
-
-  .portraitImage img {
-    width: 100% !important;
-    height: 330px !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    display: block !important;
-  }
-
-  .portraitLabel {
-    width: 88% !important;
-    margin: -35px 0 0 auto !important;
-    padding: 17px 18px !important;
-  }
-
-  .portraitLabel span {
-    font-size: 8px !important;
-    letter-spacing: 2px !important;
-  }
-
-  .portraitLabel small {
-    font-size: 9px !important;
-    line-height: 1.5 !important;
-  }
-
-  .storyCopy {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .storyCopy h2,
-  .worldHeading h2,
-  .contact h2 {
-    font-size: clamp(44px, 13vw, 65px) !important;
-    line-height: .92 !important;
-    letter-spacing: -2px !important;
-    margin-bottom: 28px !important;
-  }
-
-  .storyCopy p,
-  .storyCopy .lead {
-    font-size: 15px !important;
-    line-height: 1.75 !important;
-    max-width: 100% !important;
-  }
-
-  /* TIMELINE */
-  .timeline {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .timelineItem {
-    display: grid !important;
-    grid-template-columns: 72px minmax(0, 1fr) !important;
-    gap: 16px !important;
-    padding: 36px 0 !important;
-    overflow: visible !important;
-  }
-
-  .timelineYear {
-    font-size: 25px !important;
-    line-height: 1 !important;
-    white-space: nowrap !important;
-    z-index: 5 !important;
-  }
-
-  .timelineContent {
-    min-width: 0 !important;
-    padding-left: 6px !important;
-    z-index: 6 !important;
-  }
-
-  .timelineContent h3 {
-    font-size: 26px !important;
-    line-height: 1.08 !important;
-    margin-bottom: 12px !important;
-    white-space: normal !important;
-  }
-
-  .timelineContent p {
-    font-size: 14px !important;
-    line-height: 1.7 !important;
-    max-width: 100% !important;
-  }
-
-  .timelineDot {
-    display: none !important;
-  }
-
-  /* DÜNYA */
-  .worldHeading {
-    display: block !important;
-  }
-
-  .worldHeading > * {
-    width: 100% !important;
-  }
-
-  .worldMap {
-    min-height: auto !important;
-    height: auto !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    padding: 0 !important;
-    background: transparent !important;
-  }
-
-  .worldMap .mapLine,
-  .worldMap .mapPoint {
-    display: none !important;
-  }
-
-  .countryCard {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    min-height: 135px !important;
-    margin: 0 !important;
-    transform: none !important;
-  }
-
-  .countryCard h3 {
-    font-size: 30px !important;
-    line-height: 1 !important;
-  }
-
-  /* KURUMLAR */
-  .companies {
-    grid-template-columns: 1fr !important;
-    gap: 1px !important;
-  }
-
-  .companies article {
-    min-height: auto !important;
-    padding: 32px 25px !important;
-  }
-
-  .companies article h3 {
-    font-size: 30px !important;
-  }
-
-  /* VİZYON */
-  .vision {
-    min-height: auto !important;
-    padding-top: 90px !important;
-    padding-bottom: 90px !important;
-  }
-
-  .visionContent {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .visionContent h2 {
-    font-size: 52px !important;
-    line-height: .9 !important;
-    letter-spacing: -2px !important;
-  }
-
-  .visionContent p {
-    margin-top: 30px !important;
-    font-size: 15px !important;
-    line-height: 1.75 !important;
-    max-width: 100% !important;
-  }
-
-  /* İLETİŞİM */
-  .contact {
-    text-align: left !important;
-  }
-
-  .contact .heroButtons {
-    align-items: stretch !important;
-  }
-
-  .contactInfo {
-    font-size: 14px !important;
-    line-height: 1.8 !important;
-  }
-
-  footer {
-    flex-direction: column !important;
-    gap: 14px !important;
-    padding: 35px 7% !important;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .hero h1 {
-    font-size: 42px !important;
-  }
-
-  .storyCopy h2,
-  .worldHeading h2,
-  .contact h2 {
-    font-size: 42px !important;
-  }
-
-  .stats strong {
-    font-size: 36px !important;
-  }
-
-  .timelineItem {
-    grid-template-columns: 65px minmax(0, 1fr) !important;
-    gap: 12px !important;
-  }
-
-  .timelineYear {
-    font-size: 22px !important;
-  }
-}
-
-/* ================================
-   CLEAN MOBILE DESIGN
-   ================================ */
-
-@media (max-width: 850px) {
-
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .site {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .nav {
-    padding: 18px 22px !important;
-  }
-
-  .logo {
-    font-size: 38px !important;
-    letter-spacing: 3px !important;
-  }
-
-  .menuBtn {
-    display: block !important;
-    width: 44px !important;
-    height: 44px !important;
-    border: 1px solid rgba(166,123,40,.28) !important;
-    background: transparent !important;
-    color: #a67b28 !important;
-    font-size: 19px !important;
   }
 
   .hero {
@@ -837,21 +258,9 @@ img {
     display: block !important;
   }
 
-  .heroContent {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .eyebrow {
-    font-size: 7px !important;
-    line-height: 1.8 !important;
-    letter-spacing: 2.5px !important;
-    margin-bottom: 22px !important;
-  }
-
   .hero h1 {
     font-size: 46px !important;
-    line-height: .94 !important;
+    line-height: .95 !important;
     letter-spacing: -1px !important;
   }
 
@@ -859,7 +268,7 @@ img {
   .hero h1 strong {
     display: block !important;
     margin: 0 !important;
-    line-height: .94 !important;
+    line-height: .95 !important;
   }
 
   .hero h1 strong {
@@ -867,22 +276,20 @@ img {
   }
 
   .heroLine {
-    width: 72px !important;
+    width: 70px !important;
     height: 2px !important;
-    margin: 26px 0 22px !important;
+    margin: 28px 0 22px !important;
   }
 
   .heroContent > p {
     max-width: 100% !important;
-    font-size: 14px !important;
+    font-size: 15px !important;
     line-height: 1.8 !important;
   }
 
   .heroButtons {
-    display: flex !important;
     flex-direction: column !important;
-    gap: 9px !important;
-    margin-top: 25px !important;
+    width: 100% !important;
   }
 
   .heroButtons a {
@@ -899,133 +306,30 @@ img {
     grid-template-columns: 1fr 1fr !important;
   }
 
-  .stats div {
-    padding: 26px 8px !important;
-  }
-
-  .stats strong {
-    font-size: 39px !important;
-  }
-
-  .stats small {
-    font-size: 7px !important;
-    line-height: 1.45 !important;
-    letter-spacing: 1.6px !important;
-  }
-
   .section {
-    width: 100% !important;
-    padding: 88px 22px !important;
-    overflow: hidden;
+    padding: 80px 22px !important;
   }
-
-  .sectionTop {
-    margin-bottom: 42px !important;
-  }
-
-  .sectionMini {
-    display: none !important;
-  }
-
-  .sectionNo {
-    font-size: 8px !important;
-    letter-spacing: 3px !important;
-  }
-
-  /* HİKAYE */
 
   .storyGrid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 46px !important;
+    gap: 45px !important;
   }
 
-  .portrait {
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 0 auto !important;
-  }
-
-  .portraitImage {
-    padding: 8px !important;
-  }
-
-  .portraitImage img {
-    width: 100% !important;
-    height: 320px !important;
-    display: block !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-  }
-
-  .portraitLabel {
-    width: 86% !important;
-    margin: -28px 0 0 auto !important;
-    padding: 16px 18px !important;
-  }
-
-  .portraitLabel span {
-    font-size: 8px !important;
-    letter-spacing: 2px !important;
-  }
-
-  .portraitLabel small {
-    font-size: 9px !important;
-    line-height: 1.45 !important;
-  }
-
-  .portraitYear {
-    display: none !important;
-  }
-
-  .storyCopy {
-    width: 100% !important;
-  }
-
-  .storyCopy h2,
-  .worldHeading h2,
-  .contact h2 {
+  .storyCopy h2 {
     font-size: 48px !important;
-    line-height: .92 !important;
-    letter-spacing: -1.5px !important;
-  }
-
-  .storyCopy .lead {
-    font-size: 24px !important;
-    line-height: 1.3 !important;
-  }
-
-  .storyCopy p {
-    font-size: 14px !important;
-    line-height: 1.8 !important;
-  }
-
-  /* KARİYER */
-
-  .timeline {
-    width: 100% !important;
-  }
-
-  .timeline::before {
-    left: 0 !important;
-    opacity: .18;
+    line-height: .95 !important;
   }
 
   .timelineItem {
     display: block !important;
-    padding: 30px 0 34px !important;
-    border: 0 !important;
+    padding: 32px 0 !important;
   }
 
   .timelineYear {
     display: block !important;
     margin-bottom: 12px !important;
     font-size: 25px !important;
-    line-height: 1 !important;
-  }
-
-  .timelineDot {
-    display: none !important;
   }
 
   .timelineContent {
@@ -1033,9 +337,8 @@ img {
   }
 
   .timelineContent h3 {
-    font-size: 30px !important;
-    line-height: 1.05 !important;
-    margin-bottom: 10px !important;
+    font-size: 28px !important;
+    line-height: 1.1 !important;
   }
 
   .timelineContent p {
@@ -1043,125 +346,702 @@ img {
     line-height: 1.75 !important;
   }
 
-  /* DÜNYA */
-
-  .worldHeading {
-    display: block !important;
-    margin-bottom: 45px !important;
-  }
-
-  .worldHeading p {
-    margin-top: 24px !important;
-    font-size: 14px !important;
-    line-height: 1.8 !important;
-  }
-
-  .worldMap {
-    height: auto !important;
-    min-height: 0 !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-    padding: 0 !important;
-  }
-
-  .worldMap::before,
-  .worldMap::after,
-  .mapLine,
-  .mapPoint {
-    display: none !important;
-  }
-
   .countryCard {
     position: relative !important;
     inset: auto !important;
     width: 100% !important;
-    min-height: 112px !important;
-    margin: 0 !important;
-    transform: none !important;
+    margin: 0 0 10px !important;
   }
-
-  .countryCard strong {
-    font-size: 28px !important;
-  }
-
-  /* KURUMLAR */
 
   .companies {
     grid-template-columns: 1fr !important;
-    gap: 1px !important;
-  }
-
-  .companies article {
-    min-height: 0 !important;
-    padding: 30px 24px !important;
-  }
-
-  .companies h3 {
-    font-size: 34px !important;
-  }
-
-  /* VİZYON */
-
-  .vision {
-    min-height: auto !important;
-    padding-top: 90px !important;
-    padding-bottom: 90px !important;
-  }
-
-  .visionContent {
-    width: 100% !important;
   }
 
   .visionContent h2 {
-    font-size: 58px !important;
-    line-height: .88 !important;
-    letter-spacing: -2px !important;
+    font-size: 52px !important;
+    line-height: .9 !important;
   }
 
   .visionContent p {
-    margin-top: 28px !important;
     font-size: 15px !important;
     line-height: 1.8 !important;
-  }
-
-  /* İLETİŞİM */
-
-  .contact {
-    text-align: center !important;
-  }
-
-  .contact > p {
-    font-size: 13px !important;
-    line-height: 1.85 !important;
   }
 
   footer {
     flex-direction: column !important;
     gap: 12px !important;
-    padding: 30px 22px !important;
-    text-align: center !important;
   }
 }
 
 @media (max-width: 480px) {
 
   .hero h1 {
-    font-size: 41px !important;
-  }
-
-  .section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .storyCopy h2,
-  .worldHeading h2,
-  .contact h2 {
     font-size: 42px !important;
   }
 
-  .stats strong {
-    font-size: 35px !important;
+  .storyCopy h2 {
+    font-size: 42px !important;
+  }
+}
+
+/* =========================================================
+   DÜNYA BÖLÜMÜ — ÇAKIŞMA DÜZELTME
+   ========================================================= */
+
+#dunya .worldMap {
+  position: relative !important;
+  width: 100% !important;
+  min-height: auto !important;
+  height: auto !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 1px !important;
+
+  padding: 0 !important;
+  background: rgba(166,123,40,.18) !important;
+}
+
+#dunya .worldMap .mapLine,
+#dunya .worldMap .mapPoint {
+  display: none !important;
+}
+
+#dunya .worldMap .countryCard {
+  position: relative !important;
+  inset: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 180px !important;
+
+  margin: 0 !important;
+  transform: none !important;
+
+  display: flex !important;
+  align-items: flex-end !important;
+
+  padding: 28px !important;
+  overflow: hidden !important;
+}
+
+#dunya .worldMap .countryCard h3 {
+  max-width: 100% !important;
+  font-size: clamp(24px, 2.8vw, 42px) !important;
+  line-height: .95 !important;
+  white-space: normal !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(5),
+#dunya .worldMap .countryCard:nth-child(6),
+#dunya .worldMap .countryCard:nth-child(7) {
+  grid-column: span 1 !important;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+  #dunya .worldMap {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #dunya .worldMap .countryCard {
+    min-height: 155px !important;
+  }
+}
+
+/* MOBİL */
+@media (max-width: 850px) {
+  #dunya .worldMap {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    background: transparent !important;
+  }
+
+  #dunya .worldMap .countryCard {
+    min-height: 130px !important;
+    width: 100% !important;
+    padding: 24px !important;
+  }
+
+  #dunya .worldMap .countryCard h3 {
+    font-size: 30px !important;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL JOURNEY — ANIMATED WORLD
+   ========================================================= */
+
+#dunya .worldMap {
+  position: relative !important;
+  width: 100% !important;
+  height: 560px !important;
+  min-height: 560px !important;
+  margin-top: 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(181,138,50,.13),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(181,138,50,.045),
+      transparent 62%
+    ),
+    #f2eee5 !important;
+
+  border: 1px solid rgba(166,123,40,.18) !important;
+}
+
+/* Büyük dünya küresi */
+#dunya .worldMap::before {
+  content: "";
+  position: absolute;
+  width: min(470px, 72vw);
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(166,123,40,.28);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse at 35% 28%,
+      rgba(255,255,255,.65),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(181,138,50,.065),
+      transparent 68%
+    );
+
+  box-shadow:
+    0 0 0 35px rgba(166,123,40,.025),
+    0 0 0 80px rgba(166,123,40,.018),
+    inset 25px 0 80px rgba(166,123,40,.04);
+
+  animation: worldFloat 8s ease-in-out infinite;
+}
+
+/* Dünya üzerindeki meridyen */
+#dunya .worldMap::after {
+  content: "";
+  position: absolute;
+  width: min(220px, 34vw);
+  height: min(470px, 72vw);
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  border-left: 1px solid rgba(166,123,40,.11);
+  border-right: 1px solid rgba(166,123,40,.11);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* Mevcut harita çizgilerini kaldır */
+#dunya .mapLine,
+#dunya .mapPoint {
+  display: none !important;
+}
+
+/* Ülke kartlarını merkezde tek tek göster */
+#dunya .countryCard {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+
+  width: min(390px, 68%) !important;
+  min-height: 150px !important;
+
+  margin: 0 !important;
+  padding: 30px 34px !important;
+
+  transform: translate(-50%, -50%) translateY(14px) scale(.96) !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+
+  background: rgba(242,238,229,.82) !important;
+  border: 1px solid rgba(166,123,40,.28) !important;
+  box-shadow:
+    0 20px 55px rgba(38,43,49,.07),
+    0 0 0 8px rgba(181,138,50,.025) !important;
+
+  backdrop-filter: blur(12px);
+
+  opacity: 0 !important;
+  pointer-events: none !important;
+
+  animation:
+    worldCountryReveal 14s cubic-bezier(.22,.8,.24,1) infinite !important;
+}
+
+#dunya .countryCard::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+  background: #b58a32;
+
+  box-shadow:
+    0 0 0 7px rgba(181,138,50,.09),
+    0 0 20px rgba(181,138,50,.36);
+
+  animation: worldPointPulse 2s ease-in-out infinite;
+}
+
+#dunya .countryCard h3,
+#dunya .countryCard strong {
+  margin: 0 !important;
+  color: #18202a !important;
+
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(38px, 5vw, 62px) !important;
+  font-weight: 500 !important;
+  line-height: .9 !important;
+}
+
+#dunya .countryCard p,
+#dunya .countryCard small,
+#dunya .countryCard span {
+  margin-top: 12px !important;
+  color: #87909a !important;
+
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+}
+
+/* 7 ülke = 14 saniye / ülke başına yaklaşık 2 saniye */
+#dunya .countryCard:nth-child(1) {
+  animation-delay: 0s !important;
+}
+
+#dunya .countryCard:nth-child(2) {
+  animation-delay: 2s !important;
+}
+
+#dunya .countryCard:nth-child(3) {
+  animation-delay: 4s !important;
+}
+
+#dunya .countryCard:nth-child(4) {
+  animation-delay: 6s !important;
+}
+
+#dunya .countryCard:nth-child(5) {
+  animation-delay: 8s !important;
+}
+
+#dunya .countryCard:nth-child(6) {
+  animation-delay: 10s !important;
+}
+
+#dunya .countryCard:nth-child(7) {
+  animation-delay: 12s !important;
+}
+
+@keyframes worldCountryReveal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(14px) scale(.96);
+  }
+
+  3% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0) scale(1);
+  }
+
+  11% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0) scale(1);
+  }
+
+  15% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-10px) scale(1.02);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-10px) scale(1.02);
+  }
+}
+
+@keyframes worldPointPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 6px rgba(181,138,50,.08),
+      0 0 15px rgba(181,138,50,.25);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 12px rgba(181,138,50,.03),
+      0 0 24px rgba(181,138,50,.45);
+  }
+}
+
+@keyframes worldFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.015);
+  }
+}
+
+/* MOBİL */
+@media (max-width: 850px) {
+  #dunya .worldMap {
+    height: 430px !important;
+    min-height: 430px !important;
+    margin-top: 35px !important;
+  }
+
+  #dunya .countryCard {
+    width: min(310px, 78%) !important;
+    min-height: 135px !important;
+    padding: 24px !important;
+  }
+
+  #dunya .countryCard h3,
+  #dunya .countryCard strong {
+    font-size: 42px !important;
+  }
+
+  #dunya .countryCard p,
+  #dunya .countryCard small,
+  #dunya .countryCard span {
+    font-size: 8px !important;
+    letter-spacing: 2px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #dunya .worldMap {
+    height: 380px !important;
+    min-height: 380px !important;
+  }
+
+  #dunya .countryCard {
+    width: 82% !important;
+  }
+
+  #dunya .countryCard h3,
+  #dunya .countryCard strong {
+    font-size: 36px !important;
+  }
+}
+
+/* Hareket azaltma tercihi olanlarda animasyonu sakinleştir */
+@media (prefers-reduced-motion: reduce) {
+  #dunya .worldMap::before,
+  #dunya .countryCard,
+  #dunya .countryCard::before {
+    animation: none !important;
+  }
+
+  #dunya .countryCard:first-child {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+/* =========================================================
+   GLOBAL JOURNEY — 1 SN / ÜLKE
+   ========================================================= */
+
+#dunya .worldMap .countryCard {
+  left: 50% !important;
+  top: 50% !important;
+  width: min(390px, 70%) !important;
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) scale(.94) !important;
+  animation: countryOneSecond 7s linear infinite !important;
+  z-index: 10 !important;
+}
+
+/* Her ülke 1 saniyelik sırayla */
+#dunya .worldMap .countryCard:nth-child(1) {
+  animation-delay: 0s !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(2) {
+  animation-delay: 1s !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(3) {
+  animation-delay: 2s !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(4) {
+  animation-delay: 3s !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(5) {
+  animation-delay: 4s !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(6) {
+  animation-delay: 5s !important;
+}
+
+#dunya .worldMap .countryCard:nth-child(7) {
+  animation-delay: 6s !important;
+}
+
+@keyframes countryOneSecond {
+
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.94);
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  12% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  16% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+}
+
+/* Nokta/parlama */
+#dunya .worldMap .countryCard::before {
+  content: "";
+  width: 8px !important;
+  height: 8px !important;
+  flex: 0 0 8px;
+
+  margin: 0 0 16px !important;
+
+  background: #b58a32 !important;
+  border-radius: 50% !important;
+
+  box-shadow:
+    0 0 0 7px rgba(181,138,50,.08),
+    0 0 22px rgba(181,138,50,.38) !important;
+
+  animation: countryPulse 1s ease-in-out infinite !important;
+}
+
+@keyframes countryPulse {
+  0%, 100% {
+    transform: scale(.85);
+    opacity: .7;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+
+/* Mobil */
+@media (max-width: 850px) {
+
+  #dunya .worldMap {
+    height: 420px !important;
+    min-height: 420px !important;
+  }
+
+  #dunya .worldMap .countryCard {
+    width: min(300px, 82%) !important;
+    min-height: 125px !important;
+    padding: 24px !important;
+  }
+
+  #dunya .worldMap .countryCard h3,
+  #dunya .worldMap .countryCard strong {
+    font-size: 38px !important;
+    line-height: .95 !important;
+  }
+
+  #dunya .worldMap .countryCard p,
+  #dunya .worldMap .countryCard small,
+  #dunya .worldMap .countryCard span {
+    font-size: 8px !important;
+    margin-top: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #dunya .worldMap {
+    height: 360px !important;
+    min-height: 360px !important;
+  }
+
+  #dunya .worldMap .countryCard {
+    width: 84% !important;
+  }
+
+  #dunya .worldMap .countryCard h3,
+  #dunya .worldMap .countryCard strong {
+    font-size: 34px !important;
+  }
+}
+
+/* =========================================
+   GLOBAL JOURNEY — MOBILE OPTIMIZATION
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  #dunya .worldMap {
+    width: 100% !important;
+    height: 370px !important;
+    min-height: 370px !important;
+    margin-top: 35px !important;
+    overflow: hidden !important;
+  }
+
+  /* Küreyi mobilde küçült */
+  #dunya .worldMap::before {
+    width: 300px !important;
+    height: 300px !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  #dunya .worldMap::after {
+    width: 135px !important;
+    height: 300px !important;
+  }
+
+  /* Ülke işareti */
+  #dunya .activeCountryPin {
+    gap: 6px !important;
+    z-index: 60 !important;
+    max-width: 90% !important;
+  }
+
+  #dunya .pinDot {
+    width: 7px !important;
+    height: 7px !important;
+    flex-basis: 7px !important;
+    box-shadow:
+      0 0 0 4px rgba(181,138,50,.10),
+      0 0 14px rgba(181,138,50,.45) !important;
+  }
+
+  #dunya .pinArrow {
+    font-size: 14px !important;
+  }
+
+  #dunya .pinLabel {
+    padding: 6px 8px !important;
+    max-width: 150px !important;
+    overflow: hidden !important;
+  }
+
+  #dunya .pinLabel strong {
+    font-size: 17px !important;
+    line-height: 1 !important;
+  }
+
+  #dunya .pinLabel small {
+    font-size: 6px !important;
+    letter-spacing: 1px !important;
+    margin-top: 2px !important;
+  }
+
+  /* Mobilde uzun ülke adları ekrana taşmasın */
+  #dunya .activeCountryPin {
+    transform: translate(-50%, -50%) scale(.95) !important;
+  }
+
+  /* Bölüm başlığı */
+  #dunya .worldHeading {
+    display: block !important;
+  }
+
+  #dunya .worldHeading > div,
+  #dunya .worldHeading > p {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #dunya .worldHeading p {
+    margin-top: 24px !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #dunya .worldMap {
+    height: 325px !important;
+    min-height: 325px !important;
+  }
+
+  #dunya .worldMap::before {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  #dunya .worldMap::after {
+    width: 112px !important;
+    height: 250px !important;
+  }
+
+  #dunya .activeCountryPin {
+    transform: translate(-50%, -50%) scale(.88) !important;
+  }
+
+  #dunya .pinLabel {
+    max-width: 130px !important;
+  }
+
+  #dunya .pinLabel strong {
+    font-size: 15px !important;
+  }
+
+  #dunya .pinLabel small {
+    font-size: 5.5px !important;
   }
 }
