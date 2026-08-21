@@ -1527,6 +1527,96 @@ export default function Home() {
             gap: 15px;
           }
         }
+
+        /* MOBİL SON DÜZELTMELER */
+        @media (max-width: 600px) {
+
+          /* Timeline */
+          .timeline {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          .timelineItem {
+            grid-template-columns: 82px minmax(0, 1fr);
+            gap: 14px;
+            padding: 42px 0;
+            overflow: hidden;
+          }
+
+          .timelineYear {
+            font-size: 27px;
+            line-height: 1;
+            position: relative;
+            z-index: 5;
+          }
+
+          .timelineDot {
+            left: 76px;
+            top: 51px;
+            width: 7px;
+            height: 7px;
+            z-index: 6;
+          }
+
+          .timelineContent {
+            padding-left: 8px;
+            min-width: 0;
+            position: relative;
+            z-index: 4;
+          }
+
+          .timelineContent h3 {
+            font-size: 30px;
+            line-height: 1.05;
+            margin: 0 0 14px;
+            position: relative;
+            z-index: 5;
+          }
+
+          .timelineContent p {
+            font-size: 15px;
+            line-height: 1.75;
+            max-width: 100%;
+          }
+
+          /* Vizyon */
+          .vision {
+            min-height: auto;
+            padding-top: 90px;
+            padding-bottom: 90px;
+          }
+
+          .visionContent {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          .visionContent h2 {
+            font-size: clamp(58px, 17vw, 76px) !important;
+            line-height: .88 !important;
+            letter-spacing: -3px !important;
+            word-break: normal;
+            overflow-wrap: normal;
+          }
+
+          .visionContent p {
+            margin-top: 42px !important;
+            font-size: 16px !important;
+            line-height: 1.8 !important;
+            max-width: 100%;
+          }
+
+          .visionLine {
+            width: 120px;
+            margin-top: 32px;
+          }
+
+          .visionNumber {
+            display: none !important;
+          }
+        }
+
       `}</style>
     </main>
   );
