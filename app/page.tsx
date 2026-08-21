@@ -43,25 +43,6 @@ export default function Home() {
     <main className="site">
 
       {intro && (
-        <div className="intro">
-          <div className="introGlow" />
-          <div className="introWorld">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-
-          <div className="introContent">
-            <div className="introMark">MA</div>
-            <div className="introLine" />
-            <div className="introName">MUHAMMET AYDIN</div>
-            <div className="introSub">GİRİŞİMCİ · İŞ İNSANI · MEDYA</div>
-          </div>
-        </div>
-      )}
-
-      {intro && (
         <div className="introScreen">
           <div className="introGlow" />
 
@@ -953,6 +934,7 @@ export default function Home() {
           position: relative;
           padding: 12px;
           background: #e7dfd0;
+          overflow: visible;
         }
 
         .portraitImage:after {
@@ -965,12 +947,14 @@ export default function Home() {
 
         .portrait img {
           position: relative;
-          z-index: 1;
+          z-index: 10;
           display: block;
           width: 100%;
           height: 600px;
           object-fit: cover;
           object-position: center top;
+          opacity: 1 !important;
+          visibility: visible !important;
         }
 
         .portraitLabel {
