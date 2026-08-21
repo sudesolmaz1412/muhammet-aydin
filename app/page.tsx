@@ -144,8 +144,6 @@ export default function Home() {
             <strong>Aydın</strong>
           </h1>
 
-          <div className="heroLine" />
-
           <p>
             Tahtakale'nin dar sokaklarından uluslararası iş ortaklıklarına,
             teknolojiden dijital medyaya uzanan bir girişimcilik yolculuğu.
