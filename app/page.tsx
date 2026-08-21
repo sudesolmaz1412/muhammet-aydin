@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIntro(false), 3200);
+    const timer = setTimeout(() => setIntro(false), 2700);
 
     const scroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", scroll);
@@ -100,25 +100,6 @@ export default function Home() {
     }
   }
 `}} />
-      {intro && (
-        <div className="intro">
-          <div className="introGlow" />
-          <div className="introWorld">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-
-          <div className="introContent">
-            <div className="introMark">MA</div>
-            <div className="introLine" />
-            <div className="introName">MUHAMMET AYDIN</div>
-            <div className="introSub">GİRİŞİMCİ · İŞ İNSANI · MEDYA</div>
-          </div>
-        </div>
-      )}
-
       {intro && (
         <div className="introScreen">
           <div className="introGlow" />
