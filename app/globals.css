@@ -1091,3 +1091,100 @@ img {
     transform: translate(-50%, -50%) scale(.82) !important;
   }
 }
+
+/* MOBILE GLOBAL JOURNEY PIN — FINAL */
+@media (max-width: 850px) {
+  #dunya .worldMap {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  #dunya .activeCountryPin {
+    display: flex !important;
+    position: absolute !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    z-index: 9999 !important;
+
+    align-items: center !important;
+    gap: 5px !important;
+
+    width: max-content !important;
+    max-width: none !important;
+
+    pointer-events: none !important;
+
+    transform: translate(-50%, -50%) !important;
+  }
+
+  #dunya .pinDot {
+    display: block !important;
+    width: 8px !important;
+    height: 8px !important;
+    flex: 0 0 8px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    background: #b58a32 !important;
+    border-radius: 50% !important;
+  }
+
+  #dunya .pinArrow {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    color: #b58a32 !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+  }
+
+  #dunya .pinLabel {
+    display: flex !important;
+    flex-direction: column !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    min-width: 0 !important;
+    white-space: nowrap !important;
+
+    padding: 6px 9px !important;
+
+    background: rgba(242,238,229,.94) !important;
+    border: 1px solid rgba(166,123,40,.28) !important;
+  }
+
+  #dunya .pinLabel strong {
+    display: block !important;
+    color: #18202a !important;
+
+    font-family: "Cormorant Garamond", serif !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  #dunya .pinLabel small {
+    display: block !important;
+    margin-top: 3px !important;
+
+    color: #a67b28 !important;
+    font-size: 6px !important;
+    letter-spacing: 1px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #dunya .worldMap {
+    height: 330px !important;
+    min-height: 330px !important;
+  }
+
+  #dunya .activeCountryPin {
+    transform: translate(-50%, -50%) scale(.82) !important;
+  }
+}

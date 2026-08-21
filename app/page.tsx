@@ -21,11 +21,31 @@ const countries = [
   ["07", "UKRAYNA", "Uluslararası Saha"],
 ];
 
+const countryPositions = [
+  { left: "72%", top: "35%" }, // Tayvan
+  { left: "66%", top: "31%" }, // Çin
+  { left: "63%", top: "45%" }, // Tayland
+  { left: "72%", top: "55%" }, // Filipinler
+  { left: "43%", top: "58%" }, // Dubai
+  { left: "40%", top: "40%" }, // Gürcistan
+  { left: "45%", top: "30%" }, // Ukrayna
+];
+
+
 export default function Home() {
   const [intro, setIntro] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [activeCountry, setActiveCountry] = useState(0);
 
+
+  useEffect(() => {
+    const countryTimer = setInterval(() => {
+      setActiveCountry((current) => (current + 1) % countries.length);
+    }, 1000);
+
+    return () => clearInterval(countryTimer);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setIntro(false), 3200);
@@ -265,16 +285,29 @@ export default function Home() {
             TÜRKİYE
           </div>
 
-          {countries.map(([no, name, sub], index) => (
-            <div className={`countryCard c${index + 1}`} key={name}>
-              <div className="countryNo">{no}</div>
-              <div>
-                <strong>{name}</strong>
-                <small>{sub}</small>
+          {(() => {
+            const [no, name, sub] = countries[activeCountry];
+            const position = countryPositions[activeCountry];
+
+            return (
+              <div
+                className="activeCountryPin"
+                style={{
+                  left: position.left,
+                  top: position.top,
+                }}
+                key={name}
+              >
+                <span className="pinDot" />
+                <span className="pinArrow">↗</span>
+
+                <div className="pinLabel">
+                  <strong>{name}</strong>
+                  <small>{sub}</small>
+                </div>
               </div>
-              <span className="arrow">↗</span>
-            </div>
-          ))}
+            );
+          })()}
         </div>
 
         <div className="worldFooter">
@@ -1638,6 +1671,236 @@ export default function Home() {
 @media (max-width: 600px) {
 .photoCard
 }
+
+
+        /* ACTIVE COUNTRY */
+        #dunya .activeCountry {
+          position: absolute !important;
+          left: 50% !important;
+          top: 50% !important;
+          right: auto !important;
+          bottom: auto !important;
+          transform: translate(-50%, -50%) !important;
+
+          width: min(390px, 72%) !important;
+          min-height: 160px !important;
+          margin: 0 !important;
+
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: center !important;
+
+          padding: 28px 30px !important;
+          background: rgba(242,238,229,.9) !important;
+          border: 1px solid rgba(166,123,40,.28) !important;
+
+          opacity: 1 !important;
+          animation: none !important;
+          z-index: 30 !important;
+          pointer-events: none !important;
+          text-align: center !important;
+        }
+
+        #dunya .activeCountry strong {
+          color: #18202a !important;
+          font-family: "Cormorant Garamond", serif !important;
+          font-size: clamp(42px, 5vw, 62px) !important;
+          font-weight: 500 !important;
+          line-height: .9 !important;
+        }
+
+        #dunya .activeCountry small {
+          margin-top: 10px !important;
+          color: #a67b28 !important;
+          font-size: 9px !important;
+          font-weight: 700 !important;
+          letter-spacing: 2.5px !important;
+          text-transform: uppercase !important;
+        }
+
+        .countryProgress {
+          display: flex !important;
+          gap: 5px !important;
+          margin-top: 18px !important;
+        }
+
+        .countryProgress span {
+          width: 14px !important;
+          height: 2px !important;
+          display: block !important;
+          background: rgba(166,123,40,.18) !important;
+        }
+
+        .countryProgress span.active {
+          background: #b58a32 !important;
+        }
+
+        @media (max-width: 850px) {
+          #dunya .worldMap {
+            height: 360px !important;
+            min-height: 360px !important;
+          }
+
+          #dunya .activeCountry {
+            width: 82% !important;
+            min-height: 140px !important;
+            padding: 22px 16px !important;
+          }
+
+          #dunya .activeCountry strong {
+            font-size: 38px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          #dunya .worldMap {
+            height: 330px !important;
+            min-height: 330px !important;
+          }
+
+          #dunya .activeCountry {
+            width: 84% !important;
+          }
+
+          #dunya .activeCountry strong {
+            font-size: 34px !important;
+          }
+        }
+
+
+        /* GLOBAL JOURNEY - COUNTRY PIN */
+
+        #dunya .worldMap {
+          position: relative !important;
+        }
+
+        #dunya .activeCountryPin {
+          position: absolute !important;
+          transform: translate(-50%, -50%) !important;
+
+          display: flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+
+          z-index: 50 !important;
+          pointer-events: none !important;
+
+          animation: countryPinIn .28s ease-out both !important;
+        }
+
+        #dunya .pinDot {
+          width: 9px !important;
+          height: 9px !important;
+          flex: 0 0 9px !important;
+
+          border-radius: 50% !important;
+          background: #b58a32 !important;
+
+          box-shadow:
+            0 0 0 5px rgba(181,138,50,.10),
+            0 0 18px rgba(181,138,50,.50) !important;
+
+          animation: pinPulse 1s ease-in-out infinite !important;
+        }
+
+        #dunya .pinArrow {
+          color: #b58a32 !important;
+          font-size: 19px !important;
+          font-weight: 500 !important;
+          line-height: 1 !important;
+          text-shadow: 0 4px 15px rgba(181,138,50,.24);
+        }
+
+        #dunya .pinLabel {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 2px !important;
+
+          padding: 7px 11px !important;
+
+          background: rgba(242,238,229,.88) !important;
+          border: 1px solid rgba(166,123,40,.20) !important;
+
+          backdrop-filter: blur(8px) !important;
+
+          white-space: nowrap !important;
+        }
+
+        #dunya .pinLabel strong {
+          color: #18202a !important;
+          font-family: "Cormorant Garamond", serif !important;
+          font-size: 22px !important;
+          font-weight: 500 !important;
+          line-height: 1 !important;
+        }
+
+        #dunya .pinLabel small {
+          color: #9a7a3b !important;
+          font-size: 7px !important;
+          font-weight: 700 !important;
+          letter-spacing: 1.5px !important;
+          text-transform: uppercase !important;
+        }
+
+        @keyframes countryPinIn {
+          from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(.82);
+          }
+
+          to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+
+        @keyframes pinPulse {
+          0%, 100% {
+            transform: scale(.85);
+            opacity: .7;
+          }
+
+          50% {
+            transform: scale(1.25);
+            opacity: 1;
+          }
+        }
+
+        @media (max-width: 850px) {
+          #dunya .worldMap {
+            height: 360px !important;
+            min-height: 360px !important;
+          }
+
+          #dunya .pinLabel strong {
+            font-size: 18px !important;
+          }
+
+          #dunya .pinLabel small {
+            font-size: 6px !important;
+            letter-spacing: 1px !important;
+          }
+
+          #dunya .pinArrow {
+            font-size: 16px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          #dunya .worldMap {
+            height: 330px !important;
+            min-height: 330px !important;
+          }
+
+          #dunya .pinLabel {
+            padding: 6px 8px !important;
+          }
+
+          #dunya .pinLabel strong {
+            font-size: 16px !important;
+          }
+        }
 
       `}</style>
     </main>
