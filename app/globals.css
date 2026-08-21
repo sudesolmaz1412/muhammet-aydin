@@ -1045,3 +1045,49 @@ img {
     font-size: 5.5px !important;
   }
 }
+
+@media (max-width: 850px) {
+  #dunya .activeCountryPin {
+    position: absolute !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    z-index: 999 !important;
+    pointer-events: none !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+
+    transform: translate(-50%, -50%) scale(.95) !important;
+  }
+
+  #dunya .pinDot {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #dunya .pinArrow {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #dunya .pinLabel {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #dunya .activeCountryPin {
+    transform: translate(-50%, -50%) scale(.82) !important;
+  }
+}
