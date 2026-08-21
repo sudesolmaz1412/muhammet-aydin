@@ -63,6 +63,25 @@ export default function Home() {
     <main className={`site ${intro ? "introLoading" : "introReady"}`}>
 
       {intro && (
+        <div className="intro">
+          <div className="introGlow" />
+          <div className="introWorld">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+
+          <div className="introContent">
+            <div className="introMark">MA</div>
+            <div className="introLine" />
+            <div className="introName">MUHAMMET AYDIN</div>
+            <div className="introSub">GİRİŞİMCİ · İŞ İNSANI · MEDYA</div>
+          </div>
+        </div>
+      )}
+
+      {intro && (
         <div className="introScreen">
           <div className="introGlow" />
 
