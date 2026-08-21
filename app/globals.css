@@ -1188,3 +1188,175 @@ img {
     transform: translate(-50%, -50%) scale(.82) !important;
   }
 }
+
+/* HERO ÇİZGİSİ — MOBİL SABİT */
+@media (max-width: 850px) {
+  .hero .heroLine {
+    display: block !important;
+    position: relative !important;
+
+    width: 70px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
+
+    height: 2px !important;
+    min-height: 2px !important;
+    max-height: 2px !important;
+
+    margin: 28px 0 22px !important;
+    padding: 0 !important;
+
+    background: #b58a32 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    transform: none !important;
+    scale: none !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .hero .heroLine::before,
+  .hero .heroLine::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .heroLine {
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    height: 2px !important;
+    min-height: 2px !important;
+    max-height: 2px !important;
+  }
+}
+
+/* HERO ÇİZGİSİ — MOBİL SABİT */
+@media (max-width: 850px) {
+  .hero .heroLine {
+    display: block !important;
+    position: relative !important;
+
+    width: 70px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
+
+    height: 2px !important;
+    min-height: 2px !important;
+    max-height: 2px !important;
+
+    margin: 28px 0 22px !important;
+    padding: 0 !important;
+
+    background: #b58a32 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    transform: none !important;
+    scale: none !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .hero .heroLine::before,
+  .hero .heroLine::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .heroLine {
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    height: 2px !important;
+    min-height: 2px !important;
+    max-height: 2px !important;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .hero .heroLine {
+    display: block !important;
+    width: 70px !important;
+    height: 2px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
+    min-height: 2px !important;
+    max-height: 2px !important;
+    margin: 28px 0 22px !important;
+    padding: 0 !important;
+    background: #b58a32 !important;
+    border: 0 !important;
+  }
+}
+
+/* PORTRAIT ETİKETİ — SON DÜZELTME */
+
+.portraitLabel {
+  position: relative !important;
+  z-index: 10 !important;
+  width: 82% !important;
+  margin: -55px 0 0 auto !important;
+  padding: 22px 25px !important;
+  background: #172333 !important;
+  display: block !important;
+}
+
+.portraitLabel span {
+  display: block !important;
+  color: #caa34b !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  line-height: 1.4 !important;
+}
+
+.portraitLabel small {
+  display: block !important;
+  margin-top: 8px !important;
+  color: #aeb7bf !important;
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+}
+
+.portraitYear {
+  position: absolute !important;
+  left: -55px !important;
+  bottom: 65px !important;
+  color: #b58a32 !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 70px !important;
+  line-height: 1 !important;
+  writing-mode: vertical-rl !important;
+  z-index: 5 !important;
+}
+
+@media (max-width: 850px) {
+  .portraitLabel {
+    width: 88% !important;
+    margin: -35px 0 0 auto !important;
+    padding: 18px !important;
+  }
+
+  .portraitLabel span {
+    font-size: 8px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .portraitLabel small {
+    font-size: 9px !important;
+    margin-top: 6px !important;
+  }
+
+  .portraitYear {
+    display: none !important;
+  }
+}
