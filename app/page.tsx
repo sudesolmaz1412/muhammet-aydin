@@ -61,45 +61,9 @@ export default function Home() {
 
   return (
     <main className={`site ${intro ? "introLoading" : "introReady"}`}>
-<style dangerouslySetInnerHTML={{ __html: `
-  .site.introLoading > *:not(.introScreen) {
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
 
-  .introScreen {
-    position: fixed !important;
-    inset: 0 !important;
-    z-index: 999999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-    background: #07101b !important;
-  }
 
-  .introPortrait {
-    position: relative !important;
-    width: 230px !important;
-    height: 300px !important;
-    overflow: hidden !important;
-    opacity: 0 !important;
-  }
 
-  .introPortrait img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-
-  @media (max-width: 600px) {
-    .introPortrait {
-      width: 190px !important;
-      height: 250px !important;
-    }
-  }
-`}} />
       {intro && (
         <div className="introScreen">
           <div className="introGlow" />
