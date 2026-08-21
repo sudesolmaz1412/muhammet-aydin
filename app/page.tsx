@@ -43,6 +43,25 @@ export default function Home() {
     <main className="site">
 
       {intro && (
+        <div className="intro">
+          <div className="introGlow" />
+          <div className="introWorld">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+
+          <div className="introContent">
+            <div className="introMark">MA</div>
+            <div className="introLine" />
+            <div className="introName">MUHAMMET AYDIN</div>
+            <div className="introSub">GİRİŞİMCİ · İŞ İNSANI · MEDYA</div>
+          </div>
+        </div>
+      )}
+
+      {intro && (
         <div className="introScreen">
           <div className="introGlow" />
 
@@ -147,10 +166,12 @@ export default function Home() {
             <div className="portraitImage">
               <img src="/muhammet-aydin.jpg" alt="Muhammet Aydın" />
             </div>
+
             <div className="portraitLabel">
               <span>MUHAMMET AYDIN</span>
               <small>Girişimci · İş İnsanı · Medya</small>
             </div>
+
             <div className="portraitYear">1983</div>
           </div>
 
@@ -924,74 +945,7 @@ export default function Home() {
           gap: 110px;
           align-items: center;
         }
-
-        .portrait {
-          position: relative;
-          max-width: 470px;
-        }
-
-        .portraitImage {
-          position: relative;
-          padding: 12px;
-          background: #e7dfd0;
-          overflow: visible;
-        }
-
-        .portraitImage:after {
-          content: "";
-          position: absolute;
-          inset: 18px -18px -18px 18px;
-          border: 1px solid rgba(166,123,40,.45);
-          z-index: 0;
-        }
-
-        .portrait img {
-          position: relative;
-          z-index: 10;
-          display: block;
-          width: 100%;
-          height: 600px;
-          object-fit: cover;
-          object-position: center top;
-          opacity: 1 !important;
-          visibility: visible !important;
-        }
-
-        .portraitLabel {
-          position: relative;
-          z-index: 3;
-          width: 82%;
-          margin: -55px 0 0 auto;
-          padding: 22px 25px;
-          background: #172333;
-        }
-
-        .portraitLabel span {
-          display: block;
-          color: #caa34b;
-          font-size: 9px;
-          font-weight: 700;
-          letter-spacing: 3px;
-        }
-
-        .portraitLabel small {
-          display: block;
-          margin-top: 8px;
-          color: #aeb7bf;
-          font-size: 10px;
-        }
-
-        .portraitYear {
-          position: absolute;
-          left: -55px;
-          bottom: 65px;
-          color: #b58a32;
-          font-family: "Cormorant Garamond", serif;
-          font-size: 70px;
-          writing-mode: vertical-rl;
-        }
-
-        .storyCopy h2,
+.storyCopy h2,
         .worldHeading h2,
         .contact h2 {
           margin: 0 0 35px;
@@ -1440,20 +1394,7 @@ export default function Home() {
             grid-template-columns: 1fr;
             gap: 55px;
           }
-
-          .portrait {
-            max-width: 100%;
-          }
-
-          .portrait img {
-            height: 480px;
-          }
-
-          .portraitYear {
-            display: none;
-          }
-
-          .storyCopy h2,
+.storyCopy h2,
           .worldHeading h2 {
             font-size: 70px;
           }
@@ -1611,35 +1552,7 @@ export default function Home() {
     gap: 55px !important;
     align-items: stretch !important;
   }
-
-  .portrait {
-    width: 100% !important;
-    max-width: 330px !important;
-    margin: 0 auto !important;
-  }
-
-  .portraitImage {
-    padding: 8px !important;
-  }
-
-  .portrait img {
-    width: 100% !important;
-    height: 430px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-  }
-
-  .portraitImage:after {
-    inset: 12px -10px -10px 12px !important;
-  }
-
-  .portraitLabel {
-    width: 88% !important;
-    margin: -35px 0 0 auto !important;
-    padding: 18px !important;
-  }
-
-  .storyCopy {
+.storyCopy {
     width: 100% !important;
   }
 
@@ -1719,6 +1632,13 @@ export default function Home() {
     transform: none !important;
   }
 }
+
+        /* YENİ PORTRE KARTI */
+.photoCard
+@media (max-width: 600px) {
+.photoCard
+}
+
       `}</style>
     </main>
   );
